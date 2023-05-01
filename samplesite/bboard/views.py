@@ -2,9 +2,14 @@ import requests
 from django.shortcuts import render
 
 
-def users(request):
-    return render(request, "users.html")
+def index(requests):
+    return render(requests, "index.html")
 
-def home(request):
-    return render(request, "home.html")
+def contact (request):
+    return render(request, "contact.html")
 
+def galler(request):
+    return render(request, "galler.html")
+
+def sign(request):
+    return render(request, "sign_in.html")
