@@ -1,0 +1,15 @@
+<!-- delete_sms.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Удаление SMS</title>
+</head>
+<body>
+    <h1>Удаление SMS</h1>
+    <p>Вы действительно хотите удалить: "{{ sms }}"?</p>
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit">Удалить</button>
+    </form>
+</body>
+</html>

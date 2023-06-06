@@ -1,0 +1,15 @@
+<!-- create_sms.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create SMS</title>
+</head>
+<body>
+    <h1>Создание SMS</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Отправить SMS</button>
+    </form>
+</body>
+</html>

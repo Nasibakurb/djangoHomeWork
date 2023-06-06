@@ -1,0 +1,21 @@
+<!-- sms_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All SMS</title>
+</head>
+<body>
+    <h1>Список SMS</h1>
+    <ul>
+        {% for sms in sms_list %}
+            <li>
+                <p> От: {{ sms.sender }}<br>
+                    Для: {{ sms.receiver }}<br>
+                 Сообщение: {{ sms.message }} </p>
+            </li>
+        {% empty %}
+            <li>Сообшений нет.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
