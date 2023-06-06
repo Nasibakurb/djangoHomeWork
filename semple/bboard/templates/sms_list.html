@@ -15,7 +15,7 @@
                     Для: {{ sms.receiver }}<br>
                  Сообщение: {{ sms.message }} </p>
 
-                <a class="delete" href="{% url 'delete_sms' sms.id %}">Delete</a>
+                <a class="delete" href="{% url 'delete_sms' sms.id %}">Удалить</a>
             </li>
 
         {% empty %}
