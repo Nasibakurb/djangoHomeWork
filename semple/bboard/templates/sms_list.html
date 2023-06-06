@@ -1,8 +1,10 @@
-<!-- sms_list.html -->
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
-    <title>All SMS</title>
+    <title>Список SMS</title>
+      <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
 </head>
 <body>
     <h1>Список SMS</h1>
@@ -12,10 +14,14 @@
                 <p> От: {{ sms.sender }}<br>
                     Для: {{ sms.receiver }}<br>
                  Сообщение: {{ sms.message }} </p>
+
+                <a class="delete" href="{% url 'delete_sms' sms.id %}">Delete</a>
             </li>
+
         {% empty %}
             <li>Сообшений нет.</li>
         {% endfor %}
     </ul>
+       <a class="create" href="{% url 'create_sms' %}">Написать</a>
 </body>
 </html>
