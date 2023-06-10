@@ -3,6 +3,14 @@ from django.views.generic import ListView
 from .models import SMS
 from .forms import SMSForm
 
+
+def read_sms(request):
+    pass
+
+def get_sms(request):
+    pass
+
+
 def create_sms(request):
     if request.method == 'POST':
         form = SMSForm(request.POST)
