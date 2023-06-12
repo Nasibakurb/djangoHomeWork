@@ -2,6 +2,17 @@ from django.shortcuts import render, redirect,  get_object_or_404
 from django.views.generic import ListView
 from .models import SMS
 from .forms import SMSForm
+from django.http import JsonResponse
+
+
+def get_data_for_lessen_15():
+    data_ = [item for item in range(1, 5)]
+    return data_
+
+
+def my_view(request):
+    data = get_data_for_lessen_15()
+    return JsonResponse(data, safe=False)
 
 
 def read_sms(request):

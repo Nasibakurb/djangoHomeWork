@@ -1,5 +1,5 @@
 from django.urls import path, re_path
-from .views import SMSListView, create_sms, delete_sms, read_sms, get_sms
+from .views import SMSListView, create_sms, delete_sms, read_sms, get_sms, my_view
 
 urlpatterns = [
     path('', SMSListView.as_view(), name='sms_list'),
@@ -14,8 +14,10 @@ urlpatterns = [
     path('sms/<int:sms_id>/', read_sms, name='sms_read'),
     # re_path(r'sms/(?P<sms_id>\d+)/$', read_sms, name='sms_read'),
 
-    path('get/<int:sms_id>/', get_sms, name='get_sms')
+    path('get/<int:sms_id>/', get_sms, name='get_sms'),
     # re_path(r'get/$', get_sms, name='get_sms')
+
+    path('view/', my_view, name='view')
 ]
 
 
